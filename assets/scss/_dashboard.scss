@@ -213,6 +213,11 @@
       padding: 30px;
       margin-left: 0;
     }
+    @include respond-to(lg){
+      width: 100%;
+      padding: 30px;
+      margin-left: 0;
+    }
 
     &-title{
       h2 {
@@ -356,7 +361,9 @@
 
     @include respond-to(xs){
       overflow-x: scroll;
-      gap: 20px;
+      gap: 20px 0 20px;
+      padding-bottom: 15px;
+
     }
     @include respond-to(sm){
       overflow-x: scroll;

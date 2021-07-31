@@ -5,7 +5,6 @@ body {
   font-family: $font;
 }
 
-
 /* Buttons */
 .btn-custom {
   background-color: $primary;
@@ -116,6 +115,23 @@ body {
 }
 .card-recent-list{
   padding: 20px 10px 0 10px;
+
+  @include respond-to(xs){
+    overflow-y: scroll;
+    height: 320px;
+  }
+  @include respond-to(sm){
+    overflow-y: scroll;
+    height: 320px;
+  }
+  @include respond-to(md){
+    overflow-y: scroll;
+    height: 320px;
+  }
+  @include respond-to(lg){
+    overflow-y: scroll;
+    height: 320px;
+  }
   span{
     font-weight: $medium;
     color:$textDark;

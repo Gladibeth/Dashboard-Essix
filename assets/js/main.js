@@ -11,6 +11,7 @@ $(function () {
 
   $('[data-toggle="offcanvas"]').on("click", function () {
     $(".main-sidebar").toggleClass("open");
+    
   });
 });
 
@@ -19,7 +20,13 @@ $(function () {
   "use strict";
 
   $('[data-toggle="offprofile"]').on("click", function () {
-    $(".main-wrapper-profile").toggleClass("open");
+    if (!$('.main-wrapper-profile').hasClass("open")) {
+      $(".main-wrapper-profile").addClass("open");
+      $('.main-wrapper').css('overflow-y', 'auto')
+    } else {
+      $(".main-wrapper-profile").removeClass("open");
+    }
+    
   });
 });
 // Menu hamburger

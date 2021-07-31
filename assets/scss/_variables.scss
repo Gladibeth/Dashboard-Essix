@@ -1,0 +1,33 @@
+// Medias querys
+$breakpoints: (
+  "xs": "(min-width: 0px) and (max-width: 575px)",
+  "sm": "(min-width: 576px) and (max-width: 767px)",
+  "md": "(min-width: 768px) and (max-width: 991px)",
+  "lg": "(min-width: 992px) and (max-width: 1199px)",
+  "xl": "(min-width: 1200px)",
+  "wecan":
+    "(min-width: 1440px) and (max-width: 1440px) and (min-height: 900px) and (max-height:900px)",
+) !default;
+
+// Fonts
+$font: "Lato", sans-serif;
+$light: 300;
+$regular: 400;
+$medium: 600;
+$bold: 800;
+$extrabold: 900;
+
+// Colors
+$primary: #1c71d8;
+$secondary: #ff5202;
+$lightgray: #fdfdfd;
+$gray: #5b6069;
+$white: #fff;
+$black: #000;
+$shadowColor: #dee2e6;
+$textDark: #283038;
+$textLight: #6a6d78;
+$grayBorder: #dee2e6;
+
+// Utils
+$radius: 50px;

@@ -1,0 +1,179 @@
+@import "variables";
+@import "mixins";
+
+body {
+  font-family: $font;
+}
+
+/* Buttons */
+.btn-custom {
+  background-color: $primary;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: $radius;
+  color: $white;
+  font-weight: $bold;
+  padding: 12px 24px;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  &[type="submit"] {
+    border: 0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    box-shadow: 0px 8px 10px 0px rgb(28 113 216 / 30%);
+  }
+
+  &.small {
+    font-size: 15px;
+    padding: 10px 40px;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+}
+
+
+
+.custom-card {
+  background-color: $white;
+  border-radius: 20px;
+  border: 1px solid $grayBorder;
+  
+
+  h4 {
+    font-size: 18px;
+    color: $black;
+    font-weight: $bold;
+  }
+
+  p {
+    color: $gray;
+  }
+}
+
+.card-profile{
+  padding: 35px 20px;
+  &-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    span{
+      font-size: 25px;
+      font-weight: $bold;
+      color: $black;
+    }
+  }
+  &-img{
+    margin-bottom: 5%;
+  }
+  &-buttons{
+    margin: 8% 0;
+    width: 75%;
+    
+    ul{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      list-style: none;
+      padding-left: 0;
+    }
+    li a{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $textLight;
+      text-decoration: none;
+      font-weight: $medium;
+      font-size: 18px;
+      i{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.card-recent{
+  &-info{
+    span{
+      font-size: 18px;
+      font-weight: $medium;
+      color: $black;
+    }
+    p{    
+      color: $textLight;
+      font-weight: $medium;
+      font-size: 15px;
+    }
+  }
+ 
+}
+.card-recent-list{
+  padding: 20px 10px 0 10px;
+  span{
+    font-weight: $medium;
+    color:$textDark;
+    font-size: 14px;
+  }
+  &-item{
+    display: grid;
+    grid-template-columns: 20% 60% 15%;
+    margin-bottom: 30px;
+  }
+  &-username{
+
+    p{    
+      color: $textLight;
+      font-weight: $medium;
+      font-size: 15px;
+    }
+  }
+
+}
+.input-group{
+  input{
+    border: none;
+    
+
+    &:focus{
+      box-shadow: 0 0 0 0rem rgb(13 110 253 / 0%);
+
+    }
+    &::placeholder{
+      color: $grayBorder;
+      font-weight: $medium;
+      font-size: 15px;
+    }
+  }
+}
+
+.badge{
+  .small{
+    font-size: 13px;
+    padding: 1px 2px;
+  }
+}
+
+.bg-lightgray {
+  background-color: $lightgray;
+}
+
+.ph-xl {
+  font-size: 1.5em;
+  line-height: 0.6666em;
+  vertical-align: -0.075em;
+}
+
+.apexcharts-yaxis-texts-g, .apexcharts-xaxis-texts-g{
+  text{
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    fill: #a5a8af;
+    font-weight: 600;
+  }
+}

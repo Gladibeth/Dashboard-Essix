@@ -145,11 +145,12 @@
   margin-left: 18%;
 
   &-header {
-    width: 100%;
+    width: 98%;
     height: 100px;
     align-items: center;
-    padding: 0 30px;
+    padding-right:30px;
     border-bottom: 1px solid $grayBorder;
+    margin-left: 30px;
 
     &-title{
       h2 {
@@ -223,7 +224,7 @@
 }
 .main-wrapper-content-grid{
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 68% 32%;
 }
 
 .main-wrapper-cards-grid {
@@ -238,6 +239,12 @@
 
   .custom-card {
     padding: 21px 28px;
+
+    &-item{
+      img{
+        width: 180px;
+      }
+    }
 
     span{
       color: #6a6d78;

@@ -4,7 +4,9 @@ WebFont.load({
   },
 });
 
-
+$('.custom-card.custom-card__border').click(function(){
+  $(this).addClass('active');
+})
 var options = {
   chart: {
     height: 310,

@@ -110,6 +110,9 @@ body {
   grid-template-columns: 20% 60% 15%;
   margin-bottom: 30px;
 }
+.card-recent-list-username span {
+  font-size: 15px;
+}
 .card-recent-list-username p {
   color: #6a6d78;
   font-weight: 600;
@@ -284,11 +287,12 @@ body {
   margin-left: 18%;
 }
 .main-wrapper-header {
-  width: 100%;
+  width: 98%;
   height: 100px;
   align-items: center;
-  padding: 0 30px;
+  padding-right: 30px;
   border-bottom: 1px solid #dee2e6;
+  margin-left: 30px;
 }
 .main-wrapper-header-title h2 {
   font-size: 30px;
@@ -351,7 +355,7 @@ body {
 
 .main-wrapper-content-grid {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 68% 32%;
 }
 
 .main-wrapper-cards-grid {
@@ -366,6 +370,9 @@ body {
 }
 .main-wrapper-cards-grid .custom-card {
   padding: 21px 28px;
+}
+.main-wrapper-cards-grid .custom-card-item img {
+  width: 180px;
 }
 .main-wrapper-cards-grid .custom-card span {
   color: #6a6d78;

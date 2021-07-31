@@ -126,6 +126,9 @@ body {
     margin-bottom: 30px;
   }
   &-username{
+    span{
+      font-size: 15px;
+    }
 
     p{    
       color: $textLight;

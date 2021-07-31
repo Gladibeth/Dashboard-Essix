@@ -4,6 +4,8 @@ WebFont.load({
   },
 });
 
+// Offcanvas menu
+
 $(function () {
   "use strict";
 
@@ -12,7 +14,7 @@ $(function () {
   });
 });
 
-
+// Offcanvas user
 $(function () {
   "use strict";
 

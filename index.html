@@ -53,10 +53,7 @@
     
       <div class="main-sidebar-menu">
         <ul>
-          <li class="d-lg-none d-block"  data-toggle="offprofile">  
-            <i class="ph-gauge ph-xl"></i>
-            <a href="#">Profile</a>
-          </li>
+     
           <li>
             
             <i class="ph-gauge ph-xl"></i>
@@ -94,7 +91,7 @@
     </div>
     <div class="main-wrapper">
       <div class="main-wrapper-header d-flex justify-content-between">
-        <div class="main-wrapper-header-button">
+        <div class="main-wrapper-header-button d-lg-none">
           <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos"
               data-toggle="offcanvas" type="button">
               <span class="hamburger-box">
@@ -106,9 +103,15 @@
           <h2>Dashboard </h2>
           <i class="ph-info-fill"></i>
         </div>
+        
         <div class="main-wrapper-search input-group">
           <i class="ph-magnifying-glass-bold ph-xl"></i>
           <input type="text" class="form-control" placeholder="Search..." aria-label="Input group example" aria-describedby="basic-addon1">
+        </div>
+        <div class="main-wrapper-header--user d-xl-none d-flex">
+          <div class=""  data-toggle="offprofile">  
+            <i class="ph-user ph-xl"></i>
+          </div>
         </div>
       </div>
       <div class="main-wrapper-content">

@@ -12,6 +12,14 @@ $(function () {
   });
 });
 
+
+$(function () {
+  "use strict";
+
+  $('[data-toggle="offprofile"]').on("click", function () {
+    $(".main-wrapper-profile").toggleClass("open");
+  });
+});
 // Menu hamburger
 
 $(".hamburger").on("click", function () {

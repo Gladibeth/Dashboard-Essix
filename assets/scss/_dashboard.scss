@@ -7,28 +7,31 @@
 
 .main-sidebar {
   background-color: $lightgray;
-  transition: all 0.5s ease;
   position: fixed;
   width: 18%;
   height: 100%;
   left: 0;
   z-index: 1000;
   border-right: 1px solid $grayBorder;
-
-  @include respond-to(xs){
-    width: 70%;
-    right: 100%;
-    overflow-y: auto;
-    visibility: hidden;
-    background-color: #fff;
-    transition-timing-function: ease-in-out;
-    transition-duration: .5s;
-    transition-property: right, visibility
-  }
-
+  transition-property: right, visibility;
   &.open{
+    top: 0;
     right: 0;
-      visibility: visible;
+    visibility: visible;
+    z-index: 99999;
+    @include respond-to(xs){
+      width: 70%;
+    }
+    @include respond-to(sm){
+      width: 70%;
+    }
+    @include respond-to(md){
+      width: 50%;
+    }
+    
+  }
+  @include respond-to(lg){
+    width: 25%;
   }
 
   &-logo {
@@ -113,6 +116,10 @@
       text-decoration: none;
       transition: 0.3s ease-in-out;
       padding-left: 15px;
+
+      @include respond-to(xs){
+        font-size: 16px;
+      }
       &:before{
         position: absolute;
         content: "\fa5e";
@@ -144,6 +151,13 @@
       line-height: 1.5;
       padding: 0 40px;
       text-align: center;
+      
+      @include respond-to(xs){
+        padding: 0 20px;
+      }
+      @include respond-to(lg){
+        padding: 0px;
+      }
     }
 
     .logout-link {
@@ -163,6 +177,18 @@
     width: 100%;
     margin-left: 0;
   }
+  @include respond-to(sm){
+    width: 100%;
+    margin-left: 0;
+  }
+  @include respond-to(md){
+    width: 100%;
+    margin-left: 0;
+  }
+  @include respond-to(lg){
+    width: 75%;
+    margin-left: 25%;
+  }
 
   &-header {
     width: 98%;
@@ -173,6 +199,16 @@
     margin-left: 30px;
 
     @include respond-to(xs){
+      width: 100%;
+      padding: 30px;
+      margin-left: 0;
+    }
+    @include respond-to(sm){
+      width: 100%;
+      padding: 30px;
+      margin-left: 0;
+    }
+    @include respond-to(md){
       width: 100%;
       padding: 30px;
       margin-left: 0;
@@ -191,6 +227,27 @@
         font-size: 1.2em;
       }
     }
+    &-button{
+      button{
+        box-shadow: 0 0 0 0 !important;
+        
+        &.is-active{
+          position: absolute;
+          right: 35%;
+          z-index: 99999;
+          top: 3%;
+  
+          @include respond-to(md){
+            right: 55%;
+          }
+        }
+      }
+    }
+    &-user{
+      i{
+        color: $gray;
+      }
+    }
   }
 
   &-search{
@@ -204,10 +261,24 @@
     @include respond-to(xs){
       width: 50%;
     }
+
+    @include respond-to(sm){
+      width: 50%;
+    }
+
+    @include respond-to(md){
+      width: 40%;
+    }
+    @include respond-to(lg){
+      width: 35%;
+    }
+    
+    
     i{
       color: $grayBorder;
     }
   }
+  
 
   &-content {
     padding: 40px;
@@ -215,6 +286,9 @@
 
     @include respond-to(xs){
       padding: 20px;
+    }
+    @include respond-to(sm){
+      padding: 30px;
     }
 
     h1 {
@@ -263,6 +337,15 @@
   @include respond-to(xs){
     grid-template-columns: 100%;
   }
+  @include respond-to(sm){
+    grid-template-columns: 100%;
+  }
+  @include respond-to(md){
+    grid-template-columns: 100%;
+  }
+  @include respond-to(lg){
+    grid-template-columns: 100%;
+  }
 }
 
 .main-wrapper-cards-grid {
@@ -275,11 +358,22 @@
       overflow-x: scroll;
       gap: 20px;
     }
+    @include respond-to(sm){
+      overflow-x: scroll;
+      gap: 20px;
+    }
+    @include respond-to(md){
+      overflow-x: scroll;
+      gap: 20px;
+    }
   }
   &.card-grid__two{
     grid-template-columns: repeat(2,1fr);
 
     @include respond-to(xs){
+      grid-template-columns: 100%;
+    }
+    @include respond-to(sm){
       grid-template-columns: 100%;
     }
   }
@@ -317,6 +411,12 @@
 
         @include respond-to(xs){
           font-size: 20px;
+        }
+        @include respond-to(sm){
+          font-size: 25px;
+        }
+        @include respond-to(md){
+          font-size: 28px;
         }
       }
 
@@ -366,6 +466,12 @@
           color: $black;
           @include respond-to(xs){
             font-size: 20px;
+          }
+          @include respond-to(sm){
+            font-size: 25px;
+          }
+          @include respond-to(md){
+            font-size: 28px;
           }
         }
   
@@ -432,6 +538,40 @@
 .main-wrapper-profile{
   padding-left: 40px;
   @include respond-to(xs){
-    padding-left: 0;
+    padding: 0;
   }
+  @include respond-to(sm){
+    padding: 0;
+  }
+  @include respond-to(md){
+    padding: 0;
+  }
+  &.open{
+    left: 0;
+    visibility: visible;
+    z-index: 9999;
+    @include respond-to(lg){
+      left: 25%;
+      visibility: visible;
+      z-index: 9999;
+      width: 75%;
+      padding-left: 0;
+    }
+    .custom-card{
+      @include respond-to(xs){
+        border: none;
+      }
+      @include respond-to(sm){
+        border: none;
+      }
+      @include respond-to(md){
+        border: none;
+      }
+      @include respond-to(lg){
+        border: none;
+      }
+    }
+
+  }
+
 }

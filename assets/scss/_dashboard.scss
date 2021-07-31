@@ -15,6 +15,22 @@
   z-index: 1000;
   border-right: 1px solid $grayBorder;
 
+  @include respond-to(xs){
+    width: 70%;
+    right: 100%;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #fff;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: right, visibility
+  }
+
+  &.open{
+    right: 0;
+      visibility: visible;
+  }
+
   &-logo {
     height: 100px;
     display: flex;
@@ -143,6 +159,10 @@
   width: 82%;
   height: 100%;
   margin-left: 18%;
+  @include respond-to(xs){
+    width: 100%;
+    margin-left: 0;
+  }
 
   &-header {
     width: 98%;
@@ -151,6 +171,12 @@
     padding-right:30px;
     border-bottom: 1px solid $grayBorder;
     margin-left: 30px;
+
+    @include respond-to(xs){
+      width: 100%;
+      padding: 30px;
+      margin-left: 0;
+    }
 
     &-title{
       h2 {
@@ -174,6 +200,10 @@
     border-radius: 50px;
     padding: 2px 15px;
     width: 25%;
+
+    @include respond-to(xs){
+      width: 50%;
+    }
     i{
       color: $grayBorder;
     }
@@ -182,6 +212,10 @@
   &-content {
     padding: 40px;
     position: relative;
+
+    @include respond-to(xs){
+      padding: 20px;
+    }
 
     h1 {
       font-size: 30px;
@@ -225,6 +259,10 @@
 .main-wrapper-content-grid{
   display: grid;
   grid-template-columns: 68% 32%;
+
+  @include respond-to(xs){
+    grid-template-columns: 100%;
+  }
 }
 
 .main-wrapper-cards-grid {
@@ -232,13 +270,26 @@
   gap: 40px;
   &.card-grid__four{
     grid-template-columns: repeat(4,1fr);
+
+    @include respond-to(xs){
+      overflow-x: scroll;
+      gap: 20px;
+    }
   }
   &.card-grid__two{
     grid-template-columns: repeat(2,1fr);
+
+    @include respond-to(xs){
+      grid-template-columns: 100%;
+    }
   }
 
   .custom-card {
-    padding: 21px 28px;
+    padding: 20px 28px;
+
+    @include respond-to(xs){
+      padding: 20px;
+    }
 
     &-item{
       img{
@@ -260,9 +311,13 @@
       align-items: center;
 
       span {
-        font-size: 30px !important;
+        font-size: 30px;
         font-weight: $bold;
         color: $black;
+
+        @include respond-to(xs){
+          font-size: 20px;
+        }
       }
 
       img {
@@ -289,6 +344,10 @@
       }
     }
     &.custom-card__border{
+      
+      @include respond-to(xs){
+        width: 100%;
+      }
       span{
         color: #6a6d78;
         font-weight: 600;
@@ -302,9 +361,12 @@
         align-items: center;
   
         span {
-          font-size: 30px !important;
+          font-size: 30px;
           font-weight: $bold;
           color: $black;
+          @include respond-to(xs){
+            font-size: 20px;
+          }
         }
   
         img {
@@ -369,4 +431,7 @@
 }
 .main-wrapper-profile{
   padding-left: 40px;
+  @include respond-to(xs){
+    padding-left: 0;
+  }
 }

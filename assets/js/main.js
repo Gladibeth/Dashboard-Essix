@@ -4,9 +4,23 @@ WebFont.load({
   },
 });
 
-$('.custom-card.custom-card__border').click(function(){
-  $(this).addClass('active');
-})
+$(function () {
+  "use strict";
+
+  $('[data-toggle="offcanvas"]').on("click", function () {
+    $(".main-sidebar").toggleClass("open");
+  });
+});
+
+// Menu hamburger
+
+$(".hamburger").on("click", function () {
+  if (!$(this).hasClass("is-active")) {
+    $(this).addClass("is-active");;
+  } else {
+    $(this).removeClass("is-active");
+  }
+});
 var options = {
   chart: {
     height: 310,
